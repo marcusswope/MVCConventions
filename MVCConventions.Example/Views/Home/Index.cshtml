@@ -1,0 +1,35 @@
+﻿@using MVCConventions.Utility
+@model MVCConventions.Example.Controllers.ExampleViewModel
+
+@{
+    ViewBag.Title = "Example Conventions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="hero-unit">
+    <h1>Example Conventions</h1>
+</div>
+@using (Html.BeginForm("Index", "Home"))
+{
+    <div class="row">
+        @this.LabelFor(x => x.EmailAddress).AddClass("span2")
+        @this.InputFor(x => x.EmailAddress).AddClass("span2")
+    </div>
+    <div class="row">
+        @this.LabelFor(x => x.Password).AddClass("span2")
+        @this.InputFor(x => x.Password).AddClass("span2")
+    </div>
+    <div class="row">
+        @this.LabelFor(x => x.SocialSecurityNumber).AddClass("span2")
+        @this.InputFor(x => x.SocialSecurityNumber).AddClass("span2")
+    </div>
+    <div class="row">
+        @this.LabelFor(x => x.BirthDate).AddClass("span2")
+        @this.InputFor(x => x.BirthDate).AddClass("span2")
+    </div>
+    <div class="row">
+        @this.LabelFor(x => x.SignUpForNewsletter).AddClass("span2")
+        @this.InputFor(x => x.SignUpForNewsletter)
+    </div>
+    <input type="submit" value="Submit" />
+}

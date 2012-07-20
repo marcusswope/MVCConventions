@@ -1,0 +1,15 @@
+# Copied from fubu gitignore
+build
+artifacts
+obj
+bin
+src/CommonAssemblyInfo.cs
+*.csproj.user
+_ReSharper.*
+*.[Rr]e[Ss]harper.user
+src/FubuMVC.*.ReSharper
+*.DotSettings.user
+*.suo
+*.cache
+~$*
+*ncrunch*
